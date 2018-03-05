@@ -3,20 +3,21 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    >
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tool="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="1000dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/passenger_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="@string/passenger_label"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,36 +31,71 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
-            tools:text="@string/passenger_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/colorPrimary"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/passenger_label"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            />
+            tools:text="@string/passenger_name" />
 
 
         <ImageView
             android:id="@+id/left_rectangle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_rectangle_stroke" />
+            android:layout_width="63dp"
+            android:layout_height="77dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/origin_code_shape"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_name"
+            app:srcCompat="@drawable/shape_rectangle_stroke">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/right_rectangle"
+            android:layout_width="63dp"
+            android:layout_height="77dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/destination_code_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_name"
+            app:srcCompat="@drawable/shape_rectangle_stroke"
+            android:layout_marginRight="32dp">
+
+        </ImageView>
 
         <ImageView
             android:id="@+id/divider"
+            android:contentDescription="@string/divider"
+            android:layout_width="194dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/left_rectangle"
+            app:layout_constraintEnd_toStartOf="@+id/right_rectangle"
+            app:layout_constraintStart_toEndOf="@+id/left_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/left_rectangle"
+            app:srcCompat="@color/colorPrimaryDark"
+            tool:layout_editor_absoluteX="95dp"
+            tool:layout_editor_absoluteY="138dp"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="129dp" />
+
+        <!--
+        <ImageView
+            android:id="@+id/divider"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/right_rectangle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/origin_code"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tool:text="@string/origin_code" />
 
         <TextView
             android:id="@+id/destination_code"
@@ -72,6 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tool:text="@string/flight_code" />
+
 
 
 
@@ -166,6 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@mipmap/barcode" />
+            -->
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
