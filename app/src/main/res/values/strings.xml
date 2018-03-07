@@ -24,4 +24,9 @@
     <string name="origin_code_shape">Origin Code Shape</string>
     <string name="destination_code_shape">Destination Code Shape</string>
     <string name="divider">Divider</string>
+    <string name="blue_table_header">Blue Table Header</string>
+    <string name="blue_table_body">Blue Table Body</string>
+    <string name="table_body_terminal_description">Terminal Number</string>
+    <string name="table_body_gate_description">Gate Number</string>
+    <string name="table_body_seat_description">Seat Number</string>
 </resources>
