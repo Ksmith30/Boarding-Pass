@@ -7,7 +7,6 @@
     android:fillViewport="true">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tool="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -221,67 +220,44 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/departure_time" />
 
+        <TextView
+            android:id="@+id/terminal_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terminal_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/blue_table_body"
+            app:layout_constraintEnd_toEndOf="@+id/terminal"
+            app:layout_constraintStart_toStartOf="@+id/terminal"
+            app:layout_constraintTop_toTopOf="@+id/blue_table_header" />
+
 
         <TextView
             android:id="@+id/gate_label"
-            android:layout_width="37dp"
-            android:layout_height="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="68dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gate_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toTopOf="@+id/blue_table_body"
+            app:layout_constraintEnd_toEndOf="@+id/gate"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/terminal_label"
-            app:layout_constraintTop_toTopOf="@+id/blue_table_header"
-            app:layout_constraintVertical_bias="1.0"
-            android:text="@string/gate_label"
-            android:layout_marginLeft="68dp" />
+            app:layout_constraintStart_toStartOf="@+id/gate"
+            app:layout_constraintTop_toTopOf="@+id/blue_table_header" />
 
         <TextView
             android:id="@+id/seat_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/seat_label" />
-
-        <TextView
-            android:id="@+id/terminal_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="4dp"
+            android:text="@string/seat_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@android:color/black"
-            app:layout_constraintBottom_toTopOf="@+id/blue_table_body"
-            app:layout_constraintStart_toStartOf="@+id/blue_table_body"
-            app:layout_constraintTop_toTopOf="@+id/blue_table_header"
-            android:text="@string/terminal_label"
-            android:layout_marginLeft="32dp" />
+            app:layout_constraintBottom_toTopOf="@id/blue_table_body"
+            app:layout_constraintLeft_toLeftOf="@id/seat"
+            app:layout_constraintRight_toRightOf="@id/seat"
+            app:layout_constraintTop_toTopOf="@id/blue_table_header" />
 
-        <TextView
-            android:id="@+id/gate"
-            android:layout_width="134dp"
-            android:layout_height="70dp"
-            app:layout_constraintStart_toEndOf="@+id/terminal"
-            app:layout_constraintTop_toTopOf="@+id/blue_table_body"
-            tools:text="@string/gate" />
-
-        <TextView
-            android:id="@+id/seat"
-            android:layout_width="119dp"
-            android:layout_height="69dp"
-            app:layout_constraintStart_toEndOf="@+id/gate"
-            app:layout_constraintTop_toTopOf="@+id/blue_table_body"
-            tools:text="@string/seat" />
-
-        <TextView
-            android:id="@+id/terminal"
-            android:layout_width="125dp"
-            android:layout_height="68dp"
-            android:layout_marginLeft="16dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-            android:textColor="@android:color/white"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/blue_table_body"
-            tools:text="@string/terminal" />
 
         <ImageView
             android:id="@+id/blue_table_body"
@@ -296,11 +272,72 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/blue_table_header"
-            app:srcCompat="@color/colorPrimaryDark"
-            tool:layout_editor_absoluteX="16dp"
-            tool:layout_editor_absoluteY="393dp"
-            tools:layout_editor_absoluteX="83dp"
-            tools:layout_editor_absoluteY="472dp" />
+            app:srcCompat="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/terminal"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@id/blue_table_body"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintLeft_toLeftOf="@id/blue_table_body"
+            app:layout_constraintRight_toRightOf="@+id/blue_table_body"
+            app:layout_constraintTop_toTopOf="@+id/blue_table_body"
+            tools:text="@string/terminal" />
+
+        <TextView
+            android:id="@+id/gate"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/blue_table_body"
+            app:layout_constraintLeft_toLeftOf="@id/blue_table_body"
+            app:layout_constraintRight_toRightOf="@+id/blue_table_body"
+            app:layout_constraintTop_toBottomOf="@+id/blue_table_header"
+            tools:text="@string/gate" />
+
+        <TextView
+            android:id="@+id/seat"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/blue_table_body"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="@id/blue_table_body"
+            app:layout_constraintRight_toRightOf="@+id/blue_table_body"
+            app:layout_constraintTop_toBottomOf="@+id/blue_table_header"
+            tools:text="@string/seat" />
+
+        <ImageView
+            android:id="@+id/barcode"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blue_table_body"
+            app:srcCompat="@mipmap/barcode" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/flight_code"
+            app:layout_constraintEnd_toEndOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/passenger_name"
+            app:srcCompat="@drawable/ic_plane" />
 
 
     </android.support.constraint.ConstraintLayout>
