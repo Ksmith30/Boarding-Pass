@@ -29,4 +29,6 @@
     <string name="table_body_terminal_description">Terminal Number</string>
     <string name="table_body_gate_description">Gate Number</string>
     <string name="table_body_seat_description">Seat Number</string>
+    <string name="content_description_barcode">Barcode</string>
+    <string name="content_description_plane">Plane</string>
 </resources>
